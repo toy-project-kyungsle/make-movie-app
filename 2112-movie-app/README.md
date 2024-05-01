@@ -1,12 +1,8 @@
 # Making Web App with React (Nomad Coder)
 
-<p align='center'>
-<img width="1348" alt="스크린샷 2021-12-19 오후 1 38 17" src="https://user-images.githubusercontent.com/79993356/146664057-c2ec96ef-9b9f-45bc-bbf7-3fb236f07409.png" >
-</p>
+https://github.com/keinn51/toy_projects/assets/79993356/7e6450aa-509c-40b4-9c57-edd7f57f5e5e
 
-<p align='center'>
-    <a href="https://keinn51.github.io/React_JS_Movie_Web_Nomad">Published Webpage</a>
-</p>
+노마드코더의 강의를 듣고, 디자인부터 시작해 모든 앱을 만들어 본 프로젝트입니다.
 
 ## 🛠 Using Skill
 
