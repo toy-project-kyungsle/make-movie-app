@@ -1,6 +1,6 @@
 # Making Web App with React (Nomad Coder)
 
-https://github.com/keinn51/toy_projects/assets/79993356/7e6450aa-509c-40b4-9c57-edd7f57f5e5e
+https://github.com/keinn51/keinn51/assets/79993356/47b24991-98e4-4cb5-8105-b27298f383bc
 
 노마드코더의 강의를 듣고, 디자인부터 시작해 모든 앱을 만들어 본 프로젝트입니다.
 
@@ -73,4 +73,4 @@ npm run deploy
 
 ###### [ReactJS로 영화 웹 서비스 만들기](https://nomadcoders.co/react-for-beginners)
 
-<img width="1337" alt="nomad" src="https://user-images.githubusercontent.com/79993356/146664461-dda5c9ae-d4e7-4035-82c8-959bb47bcdaa.png">
+<img width="1337" alt="146664461-dda5c9ae-d4e7-4035-82c8-959bb47bcdaa" src="https://github.com/keinn51/keinn51/assets/79993356/0ceb1f11-8e24-4377-867a-849a3be77207">
