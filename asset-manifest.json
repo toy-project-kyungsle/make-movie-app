@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/React_JS_Movie_Web_Nomad/static/css/main.54f26a42.css",
+    "main.js": "/React_JS_Movie_Web_Nomad/static/js/main.480fe82d.js",
+    "static/media/default_back.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_back.b93cfe342bcd6011d555.jpeg",
+    "static/media/default_back_Santa.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_back_Santa.b93cfe342bcd6011d555.jpeg",
+    "static/media/default_Img.jpeg": "/React_JS_Movie_Web_Nomad/static/media/default_Img.e0b48a92573fb42c3454.jpeg",
+    "index.html": "/React_JS_Movie_Web_Nomad/index.html",
+    "main.54f26a42.css.map": "/React_JS_Movie_Web_Nomad/static/css/main.54f26a42.css.map",
+    "main.480fe82d.js.map": "/React_JS_Movie_Web_Nomad/static/js/main.480fe82d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54f26a42.css",
+    "static/js/main.480fe82d.js"
+  ]
+}
