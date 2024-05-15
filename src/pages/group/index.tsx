@@ -1,6 +1,5 @@
 import { withRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import styles from '@/style/group.module.scss';
 import { getMoviesFromServer } from '@/api/movie';
 import { useQuery } from 'react-query';
@@ -17,6 +16,14 @@ function Group({ router }: any) {
   } = useQuery<MovieDataType[]>(['myQueryKey22', router?.query], () =>
     getMoviesFromServer({ ...(router?.query || {}), sort_by: 'rating' }),
   );
+
+  const changeQueryPage = (pageNum: number) => {
+    // 새로운 쿼리 값으로 URL 변경
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query, page: pageNum }, // 기존 쿼리 유지하면서 새로운 쿼리 값 추가
+    });
+  };
 
   useEffect(() => {
     console.log(`kyungsle`, router?.query);
@@ -41,13 +48,13 @@ function Group({ router }: any) {
       </div>
       <div className={styles.footer}>
         <div className={styles.list}>
-          {/* {List_arr.map((lst) => {
+          {List_arr.map((pageNum) => {
             return (
-              <Link key={lst} href={`/page/${group}/${lst}`}>
-                {lst}
-              </Link>
+              <span key={pageNum} onClick={() => changeQueryPage(pageNum)}>
+                {pageNum}
+              </span>
             );
-          })} */}
+          })}
         </div>
       </div>
     </div>
