@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import styles from '@/style/movieCard.module.scss';
-import Image from 'next/image';
+import styles from '@/style/slide.module.scss';
 
 interface MovieCardProps {
   id: number;

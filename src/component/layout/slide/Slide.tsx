@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import { MovieDataType } from '@/type/movie';
-import MovieCard from './MovieCard';
+import MovieCard from './Card';
 
 const Slide = () => {
   const {
