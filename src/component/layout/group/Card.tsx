@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import styles from './MovieGroupCard.module.css';
+import Link from 'next/link';
+import styles from '@/style/group.module.scss';
 import default_Img from './Img/default_Img.jpeg';
 
 interface MovieGroupCardProps {
@@ -35,7 +35,7 @@ function MovieGroupCard({
           <div className={styles.title}>
             <div>
               <h3>
-                <Link to={`/movie/${id}`}>
+                <Link href={`detail?id=${id}`}>
                   {title.length > 35 ? `${title.slice(0, 35)}...` : title}
                 </Link>
               </h3>

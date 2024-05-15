@@ -1,6 +1,7 @@
+import { withRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import styles from './Group.module.css';
+import Link from 'next/link';
+import styles from '@/style/group.module.scss';
 import { getMoviesFromServer } from '@/api/movie';
 import { useQuery } from 'react-query';
 import { MovieDataType } from '@/type/movie';
@@ -8,14 +9,18 @@ import MovieGroupCard from '@/component/layout/group/Card';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-function Group({ page, group }: { page: string; group: string }) {
+function Group({ router }: any) {
   const {
     isLoading,
     error,
     data: movieData,
-  } = useQuery<MovieDataType[]>('myQueryKey', () =>
-    getMoviesFromServer({ page, sort_by: 'rating' }),
+  } = useQuery<MovieDataType[]>(['myQueryKey22', router?.query], () =>
+    getMoviesFromServer({ ...(router?.query || {}), sort_by: 'rating' }),
   );
+
+  useEffect(() => {
+    console.log(`kyungsle`, router?.query);
+  }, [router?.query]);
 
   return (
     <div className={styles.container}>
@@ -36,17 +41,17 @@ function Group({ page, group }: { page: string; group: string }) {
       </div>
       <div className={styles.footer}>
         <div className={styles.list}>
-          {List_arr.map((lst) => {
+          {/* {List_arr.map((lst) => {
             return (
-              <Link key={lst} to={`/page/${group}/${lst}`}>
+              <Link key={lst} href={`/page/${group}/${lst}`}>
                 {lst}
               </Link>
             );
-          })}
+          })} */}
         </div>
       </div>
     </div>
   );
 }
 
-export default Group;
+export default withRouter(Group);
