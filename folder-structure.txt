@@ -1,0 +1,63 @@
+/your-project
+  /public
+    /images
+    /fonts
+  /src
+    /components
+      /common
+        /Button
+          index.tsx
+          styles.module.scss
+        /Header
+          index.tsx
+          styles.module.scss
+      /layout
+        /MainLayout
+          index.tsx
+          styles.module.scss
+    /hooks
+      useUser.ts
+      useAuth.ts
+    /models
+      user.ts
+      auth.ts
+    /pages
+      _app.tsx
+      index.tsx
+      /dashboard
+        index.tsx
+        styles.module.scss
+    /styles
+      /abstracts
+        _variables.scss
+        _mixins.scss
+      globals.scss
+    /state
+      /atoms
+        userAtom.ts
+        themeAtom.ts
+      /selectors
+        userSelector.ts
+        themeSelector.ts
+    /types
+      user.d.ts
+      auth.d.ts
+  .eslintrc
+  .prettierrc
+  tsconfig.json
+  package.json
+
+
+-----
+
+public: 정적 파일(이미지, 폰트 등)을 저장합니다. 이들은 프로젝트 내 어디서나 직접 참조될 수 있습니다.
+
+src: 소스 코드를 포함하는 메인 디렉토리입니다.
+
+components: UI 컴포넌트들을 저장합니다. 각 컴포넌트는 자체 폴더와 SCSS 모듈을 가집니다.
+hooks: React의 커스텀 훅(custom hook)을 저장합니다. 로직의 재사용성을 높이기 위해 사용됩니다.
+models: 애플리케이션의 데이터 모델이나 인터페이스를 정의합니다. TypeScript를 사용하여 타입 안정성을 보장합니다.
+pages: Next.js의 페이지 파일. 각 페이지는 필요에 따라 자체 SCSS를 가질 수 있습니다.
+styles: SCSS 변수, 믹스인, 글로벌 스타일 등을 저장합니다.
+state: Recoil을 사용하는 상태 관리 로직을 저장합니다. atoms와 selectors를 통해 상태와 파생 상태를 관리합니다.
+types: 전역적으로 사용될 TypeScript 타입 정의들을 저장합니다. 이를 통해 애플리케이션 전반에 걸쳐 일관된 타입 사용이 가능해집니다.
