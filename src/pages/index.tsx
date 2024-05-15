@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 import styles from '@/style/home.module.scss';
+import Slide from '@/component/layout/Slide';
 
-const Group_obj = {
+const Group_obj: { [key: string]: string } = {
   High_Rating: 'minimum_rating=8',
   Romance: 'genre=romance',
   Music: 'genre=music',
@@ -20,7 +21,7 @@ const Home = () => {
             <div className={styles.title}>
               <div className={styles.titleBox}>
                 <Link
-                  href={`/group`}
+                  href={`/group?${Group_obj[group]}`}
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -34,6 +35,7 @@ const Home = () => {
                     <span>{group}</span>
                   </div>
                 </Link>
+                <Slide />
               </div>
             </div>
           </div>
