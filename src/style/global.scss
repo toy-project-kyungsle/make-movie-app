@@ -115,7 +115,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -126,4 +126,35 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: inherit;
+}
+
+* {
+  font-family: 'Bakbak One', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bakbak One', cursive;
+
+  height: 100%;
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+}
+
+a {
+  font-family: 'Bakbak One', cursive;
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:active {
+  color: red;
 }
