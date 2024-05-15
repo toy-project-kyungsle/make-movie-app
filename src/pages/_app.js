@@ -1,5 +1,6 @@
 import NavBar from '@/component/layout/nav/NavBar';
 import '@/style/global.scss';
+import Head from 'next/head';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 export default function App({ Component, pageProps }) {
@@ -15,6 +16,14 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <QueryClientProvider client={queryClient}>
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Readex+Pro:wght@300&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <NavBar />
         <Component {...pageProps} />
       </QueryClientProvider>

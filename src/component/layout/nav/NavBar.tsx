@@ -1,7 +1,5 @@
 import styles from '@/style/navbar.module.scss';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { ChangeEvent, useState } from 'react';
 
 const Group_obj: { [key: string]: string } = {
@@ -39,34 +37,6 @@ function NavBar() {
             </div>
           );
         })}
-        {/* 🎄 Merry Christmas! */}
-        <div className={styles.MerryChristMas}>
-          <Link href={`/search/christmas`}>Christmas🎄</Link>
-        </div>
-      </div>
-
-      {/* Search Bar */}
-      <div className={styles.searchBar}>
-        <div>
-          <form>
-            {/* Search Text */}
-            <input
-              type="text"
-              placeholder="Search Movie!"
-              value={search}
-              onChange={searchClick}
-              onMouseOut={() => {
-                setSearch('');
-              }}
-            ></input>
-            {/* Search Button */}
-            <Link href={`/search/${search}`}>
-              <button>
-                <FontAwesomeIcon icon={faSearch} size="lg" />
-              </button>
-            </Link>
-          </form>
-        </div>
       </div>
     </div>
   );

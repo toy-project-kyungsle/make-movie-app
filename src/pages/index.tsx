@@ -18,25 +18,16 @@ const Home = () => {
       {Group_key_arr.map((group) => {
         return (
           <div key={group}>
-            <div className={styles.title}>
-              <div className={styles.titleBox}>
-                <Link
-                  href={`/group?${Group_obj[group]}`}
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignContent: 'center',
-                  }}
-                >
-                  <div className={styles.titleImg}>
-                    <FontAwesomeIcon icon={faCompactDisc}></FontAwesomeIcon>
-                  </div>
-                  <div>
-                    <span>{group}</span>
-                  </div>
-                </Link>
-                <Slide />
-              </div>
+            <div className={styles.slideBox}>
+              <Link className={styles.titleBox} href={`/group?${Group_obj[group]}`}>
+                <div className={styles.titleIcon}>
+                  <FontAwesomeIcon icon={faCompactDisc}></FontAwesomeIcon>
+                </div>
+                <div>
+                  <span>{group}</span>
+                </div>
+              </Link>
+              <Slide />
             </div>
           </div>
         );
