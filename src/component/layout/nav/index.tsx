@@ -1,6 +1,5 @@
 import styles from '@/style/navbar.module.scss';
 import Link from 'next/link';
-import { ChangeEvent, useState } from 'react';
 
 const Group_obj: { [key: string]: string } = {
   High_Rating: 'minimum_rating=8',
@@ -11,13 +10,6 @@ const Group_obj: { [key: string]: string } = {
 const Group_key_arr = Object.keys(Group_obj);
 
 function NavBar() {
-  const [search, setSearch] = useState('');
-
-  // Event when u touch the Search Bar!
-  const searchClick = (event: ChangeEvent<HTMLInputElement>) => {
-    setSearch(event.target.value);
-  };
-
   return (
     // It's the Navigation Bar, always above the container!!
     <div className={styles.container}>

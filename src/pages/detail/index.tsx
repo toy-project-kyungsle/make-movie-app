@@ -3,7 +3,6 @@ import styles from '@/style/detail.module.scss';
 import { MovieDataType } from '@/type/movie';
 import { withRouter } from 'next/router';
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
 
 function MovieDetail({ router }: any) {
   const {

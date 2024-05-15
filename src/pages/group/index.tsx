@@ -4,7 +4,7 @@ import styles from '@/style/group.module.scss';
 import { getMoviesFromServer } from '@/api/movie';
 import { useQuery } from 'react-query';
 import { MovieDataType } from '@/type/movie';
-import MovieGroupCard from '@/component/layout/group/Card';
+import MovieGroupCard from '@/component/common/MovieHorizontalCard';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

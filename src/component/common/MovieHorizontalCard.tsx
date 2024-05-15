@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styles from '@/style/group.module.scss';
-import default_Img from './Img/default_Img.jpeg';
 
-interface MovieGroupCardProps {
+interface MovieHorizontalCardProps {
   id: number;
   coverImg: string;
   title: string;
@@ -13,7 +11,7 @@ interface MovieGroupCardProps {
   summary: string;
 }
 
-function MovieGroupCard({
+function MovieHorizontalCard({
   id,
   coverImg,
   title,
@@ -21,7 +19,7 @@ function MovieGroupCard({
   runtime,
   year,
   summary,
-}: MovieGroupCardProps) {
+}: MovieHorizontalCardProps) {
   return (
     <div className={styles.movie}>
       {/* ShortView (Img, Title, rating, runtime...) */}
@@ -51,4 +49,4 @@ function MovieGroupCard({
   );
 }
 
-export default MovieGroupCard;
+export default MovieHorizontalCard;

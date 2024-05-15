@@ -1,4 +1,4 @@
-import NavBar from '@/component/layout/nav/NavBar';
+import NavBar from '@/component/layout/nav';
 import '@/style/global.scss';
 import Head from 'next/head';
 import { QueryClient, QueryClientProvider } from 'react-query';

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 import styles from '@/style/home.module.scss';
-import Slide from '@/component/layout/slide/Slide';
+import Slide from '@/component/layout/slide';
 
 const Group_obj: { [key: string]: string } = {
   High_Rating: 'minimum_rating=8',

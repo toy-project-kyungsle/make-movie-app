@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from '@/style/slide.module.scss';
 
-interface MovieCardProps {
+interface MovieVerticalCardProps {
   id: number;
   coverImg: string;
   rating: number;
@@ -9,7 +9,7 @@ interface MovieCardProps {
   title: string;
 }
 
-const MovieCard = ({ id, coverImg, rating, runtime, title }: MovieCardProps) => {
+const MovieVerticalCard = ({ id, coverImg, rating, runtime, title }: MovieVerticalCardProps) => {
   return (
     <div className={styles.movie}>
       <Link href={`/detail?movie_id=${id}`}>
@@ -30,4 +30,4 @@ const MovieCard = ({ id, coverImg, rating, runtime, title }: MovieCardProps) => 
   );
 };
 
-export default MovieCard;
+export default MovieVerticalCard;
