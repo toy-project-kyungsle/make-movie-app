@@ -1,17 +1,16 @@
 import { getOneMovieFromServer } from '@/api/movie';
 import styles from '@/style/detail.module.scss';
 import { MovieDataType } from '@/type/movie';
+import { withRouter } from 'next/router';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 
-function MovieDetail() {
-  const { id = '1' } = useParams();
-
+function MovieDetail({ router }: any) {
   const {
     isLoading,
     error,
     data: movieData,
-  } = useQuery<MovieDataType>('myQueryKey', () => getOneMovieFromServer({ movie_id: id }));
+  } = useQuery<MovieDataType>('myQueryKey', () => getOneMovieFromServer(router.query));
 
   return (
     <div className={styles.movie}>
@@ -60,4 +59,4 @@ function MovieDetail() {
   );
 }
 
-export default MovieDetail;
+export default withRouter(MovieDetail);

@@ -35,7 +35,7 @@ function MovieGroupCard({
           <div className={styles.title}>
             <div>
               <h3>
-                <Link href={`detail?id=${id}`}>
+                <Link href={`detail?movie_id=${id}`}>
                   {title.length > 35 ? `${title.slice(0, 35)}...` : title}
                 </Link>
               </h3>

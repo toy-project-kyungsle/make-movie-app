@@ -12,7 +12,7 @@ interface MovieCardProps {
 const MovieCard = ({ id, coverImg, rating, runtime, title }: MovieCardProps) => {
   return (
     <div className={styles.movie}>
-      <Link href={`/detail?id=${id}`}>
+      <Link href={`/detail?movie_id=${id}`}>
         <img src={coverImg} alt={title} />
         <div className={styles.letters}>
           <div className={styles.title}>
