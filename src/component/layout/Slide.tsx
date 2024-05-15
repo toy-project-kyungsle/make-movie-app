@@ -4,13 +4,16 @@ import styles from '@/style/slide.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
+import { MovieDataType } from '@/type/movie';
 
 const Slide = () => {
   const {
     isLoading,
     error,
     data: movieData,
-  } = useQuery('myQueryKey', () => getMoviesFromServer({ limit: '10', sort_by: 'rating' }));
+  } = useQuery<MovieDataType>('myQueryKey', () =>
+    getMoviesFromServer({ limit: '10', sort_by: 'rating' }),
+  );
 
   useEffect(() => {
     console.log(movieData);
