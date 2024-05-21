@@ -7,13 +7,14 @@ import { useState } from 'react';
 import { MovieDataType } from '@/type/movie';
 import MovieCard from '@/component/common/MovieVerticalCard';
 
-const Slide = () => {
+const Slide = ({ query }: { query: string }) => {
+  const [queryKey, queryValue] = query.split('=');
   const {
     isLoading,
     error,
     data: movieData,
-  } = useQuery<MovieDataType[]>('myQueryKey', () =>
-    getMoviesFromServer({ limit: '10', sort_by: 'rating' }),
+  } = useQuery<MovieDataType[]>(`movie-slide-${queryKey}-${queryValue}`, () =>
+    getMoviesFromServer({ limit: '10', sort_by: 'rating', [queryKey]: queryValue }),
   );
 
   const [trans, setTrans] = useState(0);

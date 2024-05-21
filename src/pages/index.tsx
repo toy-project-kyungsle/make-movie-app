@@ -27,7 +27,7 @@ const Home = () => {
                   <span className={styles.title}>{group}</span>
                 </div>
               </Link>
-              <Slide />
+              <Slide query={Group_obj[group]} />
             </div>
           </div>
         );
