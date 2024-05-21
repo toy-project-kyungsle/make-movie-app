@@ -3,9 +3,10 @@
 
 - 구현할 것
 
-  - test code
+  - fall back page
 
 - 더 할것
+  - loading state 관리
   - import 문 정리
   - 타입 정리
   - 코드 정리
