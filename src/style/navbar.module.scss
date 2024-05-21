@@ -1,4 +1,3 @@
-/* All the container! */
 .container {
   position: relative;
   width: 100%;
@@ -11,27 +10,6 @@
   z-index: 10;
 }
 
-/* Have to Seperate because the Search bar has a tag! */
-.GroupLink a {
-  margin: 0px 20px;
-  position: relative;
-  top: 20%;
-  font-size: 20px;
-}
-
-/* text shadow : text Shadowing with 5px (width) 5px (height) color */
-.pageName {
-  position: relative;
-  top: 20%;
-  font-size: 20px;
-  text-shadow: 5px 5px #c7cdd4;
-}
-
-/* When you touch the pageName, it would be bigger */
-.pageName:hover {
-  transform: scale(1.1);
-}
-
 .GroupLink,
 .Link {
   display: flex;
@@ -40,35 +18,34 @@
   text-shadow: 5px 5px #c7cdd4;
 }
 
-/* When you touch the GroupLink, it would be bigger */
+.GroupLink a {
+  margin: 0px 20px;
+  position: relative;
+  top: 20%;
+  font-size: 20px;
+}
+
+.pageName {
+  position: relative;
+  top: 20%;
+  font-size: 20px;
+  text-shadow: 5px 5px #c7cdd4;
+}
+
+.pageName:hover {
+  transform: scale(1.1);
+}
+
 .Link_sep:hover {
   transform: scale(1.1);
 }
 
-/* Merry Christmas~ */
-.MerryChristMas a {
-  color: green;
-  text-shadow: 3px 3px #fcadad;
-}
-
-/* A tag's color which clicked will be green with no underline (red when hover)*/
-.MerryChristMas a:visited {
-  color: green;
-  text-decoration: none;
-}
-.MerryChristMas a:hover {
-  color: rgb(206, 15, 15);
-  text-decoration: none;
-}
-
-/* Search Bar moves to center */
 .searchBar {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* height : search text height, text-align : moves to center */
 .searchBar input {
   height: 30px;
   margin-right: 10px;

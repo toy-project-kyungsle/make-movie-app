@@ -1,11 +1,3 @@
-.container {
-  z-index: 1;
-}
-
-.movie {
-  color: antiquewhite;
-}
-
 .background {
   z-index: -1;
 }
@@ -15,16 +7,22 @@
   width: 100%;
 }
 
-/* show the container with absolute */
-.show {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  z-index: 2;
+.container {
+  z-index: 1;
+}
 
-  width: 50%;
+.movie {
+  color: antiquewhite;
+}
+
+.show {
   border: 2px solid snow;
   border-radius: 10px;
+  left: 25%;
+  position: absolute;
+  top: 25%;
+  width: 50%;
+  z-index: 2;
 }
 
 .shortView {
@@ -33,16 +31,15 @@
   padding: 10px 10px;
 }
 
-/* 230px 345px -> medium_cover_size */
 .shortView_Img {
   float: left;
-  width: 230px;
   height: 345px;
+  width: 230px;
 }
 
 .shortView_letters {
-  width: 70%;
   margin: 20px 0 0 30px;
+  width: 70%;
 }
 
 .shortView_letters h3,
@@ -56,19 +53,15 @@
 }
 
 .descript {
-  width: 100%;
   padding: 0 10px 10px 10px;
+  width: 100%;
 }
 
-/* bg = background
-  fixed : background position is fixed
-  filter -> you can change the background */
 .Detail_bg {
+  filter: brightness(50%);
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-
-  min-width: 100%;
-  min-height: 100%;
-  filter: brightness(50%);
 }

@@ -11,12 +11,11 @@
 
     .slides {
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
       width: 2300px;
       height: 475px;
       display: flex;
-
       transition: 0.5s;
       overflow: visible;
 
@@ -24,9 +23,13 @@
         width: 230px;
         height: 475px;
         background-color: whitesmoke;
-        transition: all 0.4s ease;
         border-radius: 10px;
-        // overflow: hidden;
+        transition: all 0.4s ease;
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
 
         .movieName {
           text-shadow: 3px 3px #a7b6b8;
@@ -37,10 +40,6 @@
           font-size: 16px;
         }
 
-        &:hover {
-          transform: translateY(-10px);
-          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        }
         img {
           width: 230px;
           height: 345px;
@@ -66,17 +65,19 @@
       color: rgb(131, 55, 218);
       opacity: 0.8;
       font-size: 44px;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
     }
+
     .left {
       left: 5%;
     }
+
     .right {
       right: 5%;
-    }
-    .left:hover,
-    .right:hover {
-      cursor: pointer;
-      transform: scale(1.1);
     }
   }
 }
