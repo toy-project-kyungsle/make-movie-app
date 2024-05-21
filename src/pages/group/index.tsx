@@ -1,9 +1,8 @@
 import { withRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import styles from '@/style/group.module.scss';
 import { getMoviesFromServer } from '@/api/movie';
 import { useQuery } from 'react-query';
-import { MovieDataType } from '@/type/movie';
+import { MovieDataType } from '@/data/type/movie';
 import MovieGroupCard from '@/component/common/MovieHorizontalCard';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -24,10 +23,6 @@ function Group({ router }: any) {
       query: { ...router.query, page: pageNum }, // 기존 쿼리 유지하면서 새로운 쿼리 값 추가
     });
   };
-
-  useEffect(() => {
-    console.log(`kyungsle`, router?.query);
-  }, [router?.query]);
 
   return (
     <div className={styles.container}>

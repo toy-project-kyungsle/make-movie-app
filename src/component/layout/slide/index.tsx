@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import MovieCard from '@/component/common/MovieVerticalCard';
 // data
 import { getMoviesFromServer } from '@/api/movie';
-import { MovieDataType } from '@/type/movie';
+import { MovieDataType } from '@/data/type/movie';
 // style
 import styles from '@/style/slide.module.scss';
 // resource
