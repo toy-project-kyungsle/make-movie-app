@@ -1,14 +1,19 @@
+import { useMemo, useState } from 'react';
+// component
+import MovieCard from '@/component/common/MovieVerticalCard';
+// data
 import { getMoviesFromServer } from '@/api/movie';
-import { useQuery } from 'react-query';
+import { MovieDataType } from '@/type/movie';
+// style
 import styles from '@/style/slide.module.scss';
+// resource
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
-import { MovieDataType } from '@/type/movie';
-import MovieCard from '@/component/common/MovieVerticalCard';
+// external pkg
+import { useQuery } from 'react-query';
 
 const Slide = ({ query }: { query: string }) => {
-  const [queryKey, queryValue] = query.split('=');
+  const [queryKey, queryValue] = useMemo(() => query.split('='), [query]);
   const {
     isLoading,
     error,
@@ -19,14 +24,12 @@ const Slide = ({ query }: { query: string }) => {
 
   const [trans, setTrans] = useState(0);
 
-  // >= 0 : The End of the Right!
   const onClickL = () => {
     if (trans >= 0) return;
 
     setTrans((current) => current + 460);
   };
 
-  // -1380 : 230 * 6, so the button can be clicked only 3 times
   const onClickR = () => {
     if (trans <= -1380) return;
 

@@ -11,14 +11,11 @@ const Group_key_arr = Object.keys(Group_obj);
 
 function NavBar() {
   return (
-    // It's the Navigation Bar, always above the container!!
     <div className={styles.container}>
-      {/*  Page Name */}
       <div className={styles.pageName}>
         <Link href={'/'}>SooFLEX</Link>
       </div>
 
-      {/* Group Links */}
       <div className={styles.GroupLink}>
         {Group_key_arr.map((key) => {
           return (
