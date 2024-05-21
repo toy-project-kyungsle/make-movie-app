@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import styles from '@/style/slide.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { MovieDataType } from '@/type/movie';
 import MovieCard from '@/component/common/MovieVerticalCard';
 
@@ -31,10 +31,6 @@ const Slide = () => {
 
     setTrans((current) => current - 460);
   };
-
-  useEffect(() => {
-    console.log(movieData);
-  }, [movieData]);
 
   return (
     <div className={styles.container}>

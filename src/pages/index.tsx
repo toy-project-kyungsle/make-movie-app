@@ -24,7 +24,7 @@ const Home = () => {
                   <FontAwesomeIcon icon={faCompactDisc}></FontAwesomeIcon>
                 </div>
                 <div>
-                  <span>{group}</span>
+                  <span className={styles.title}>{group}</span>
                 </div>
               </Link>
               <Slide />

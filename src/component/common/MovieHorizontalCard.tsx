@@ -22,13 +22,12 @@ function MovieHorizontalCard({
 }: MovieHorizontalCardProps) {
   return (
     <div className={styles.movie}>
-      {/* ShortView (Img, Title, rating, runtime...) */}
-      <div className={styles.show}>
-        {/* Img */}
-        <div className={styles.Img}>
-          <img src={coverImg} alt={title} />
+      <div className={styles.box}>
+        <div className={styles.image}>
+          <Link href={`detail?movie_id=${id}`}>
+            <img src={coverImg} alt={title} />
+          </Link>
         </div>
-        {/* Letters */}
         <div className={styles.letters}>
           <div className={styles.title}>
             <div>
