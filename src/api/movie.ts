@@ -1,6 +1,6 @@
-import { MovieDataType } from '@/data/type/movie';
-import apiInstance from './apiInstance';
 import { defaultMovieData } from '@/data/constant/movie';
+import { MovieDataType } from '@/data/type/movie';
+import apiInstance from '@/api/apiInstance';
 
 const getMoviesFromServer = async (props: { [x: string]: string }) => {
   const queryParams = new URLSearchParams(props).toString();

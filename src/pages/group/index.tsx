@@ -1,9 +1,14 @@
 import { withRouter } from 'next/router';
-import styles from '@/style/group.module.scss';
-import { getMoviesFromServer } from '@/api/movie';
-import { useQuery } from 'react-query';
-import { MovieDataType } from '@/data/type/movie';
+// component
 import MovieGroupCard from '@/component/common/MovieHorizontalCard';
+// api
+import { getMoviesFromServer } from '@/api/movie';
+// data
+import { MovieDataType } from '@/data/type/movie';
+// style
+import styles from '@/style/group.module.scss';
+// external pkg
+import { useQuery } from 'react-query';
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

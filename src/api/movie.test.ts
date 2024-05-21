@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { getMoviesFromServer, getOneMovieFromServer } from './movie';
+import { getMoviesFromServer, getOneMovieFromServer } from '@/api/movie';
 
 test('get movies from server', async () => {
   const res = await getMoviesFromServer({

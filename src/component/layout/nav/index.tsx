@@ -1,5 +1,6 @@
-import styles from '@/style/navbar.module.scss';
 import Link from 'next/link';
+// style
+import styles from '@/style/navbar.module.scss';
 
 const Group_obj: { [key: string]: string } = {
   High_Rating: 'minimum_rating=8',

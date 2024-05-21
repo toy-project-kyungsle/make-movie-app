@@ -1,7 +1,11 @@
-import { getOneMovieFromServer } from '@/api/movie';
-import styles from '@/style/detail.module.scss';
-import { MovieDataType } from '@/data/type/movie';
 import { withRouter } from 'next/router';
+// api
+import { getOneMovieFromServer } from '@/api/movie';
+// data
+import { MovieDataType } from '@/data/type/movie';
+// style
+import styles from '@/style/detail.module.scss';
+// external pkg
 import { useQuery } from 'react-query';
 
 function MovieDetail({ router }: any) {
